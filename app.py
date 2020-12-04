@@ -1,12 +1,11 @@
-from paperscrape import arxiv
 import re
 from flask import render_template, Flask
-from newsscrape import news
+from rss import news, arxiv
 
 app=Flask(__name__)
 
 titles, abstracts, plinks=arxiv().get_recent('cs.AI')
-titles=[re.sub('. \(.*\)', '', title) for title in titles]
+titles=[re.sub(r'. \(.*\)', '', title) for title in titles]
 news,nlinks=news().get_recent('CAAqIAgKIhpDQkFTRFFvSEwyMHZNRzFyZWhJQ1pXNG9BQVAB')
 
 @app.route('/')
