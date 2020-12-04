@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel='stylesheet' href="{{url_for('static',filename='styles/home.css')}}">
+<title>AI aggregator</title>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="{{url_for('homepage')}}" style='font-size: 25px;'> AAAI </a>
+                <a href="{{url_for('paperspage')}}">Papers</a>
+                <a href="{{url_for('newspage')}}">News</a>
+                <a href="{{url_for('aboutpage')}}">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact us</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div style='width: 80%; float: initial; margin-left: 20px;'> 
+        <h2> Welcome to my personal content aggregator - All About AI (AAAI)</h2>
+        <p> My name is Aditya Kousik Cotra. I am pursuing Masters in Computer Science at the University of Cincinnati. This website is a content aggregator thatI have developed using python flask. This website uses RSS feeds from arxiv and other news sources related to AI to aggregate relevant content. Feel free to inspect the webpage and reach me out at <a href="mailto:cotraak@mail.uc.edu">cotraak@mail.uc.edu</a> for any questions. Thank you.</p>
+        </p>
+    </div>
+</body>
+</html>

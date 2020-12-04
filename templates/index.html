@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel='stylesheet' href="{{url_for('static',filename='styles/home.css')}}">
+<title>AI aggregator</title>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="{{url_for('homepage')}}" style='font-size: 25px;'> AAAI </a>
+                <a href="{{url_for('paperspage')}}">Papers</a>
+                <a href="{{url_for('newspage')}}">News</a>
+                <a href="{{url_for('aboutpage')}}">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact us</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class='container'> 
+        <h2>Recent Papers</h2>
+        <ul>
+            <li> <a href={{plink[0]}}> {{papers[0]}} </a> </li>
+            <li> <a href={{plink[1]}}> {{papers[1]}} </a> </li>
+            <li> <a href={{plink[2]}}> {{papers[2]}} </a> </li>
+            <li> <a href={{plink[3]}}> {{papers[3]}} </a> </li>
+            <li> <a href={{plink[4]}}> {{papers[4]}} </a> </li>
+            <li> <a href={{plink[5]}}> {{papers[5]}} </a> </li>
+            <li> <a href={{plink[6]}}> {{papers[6]}} </a> </li>
+            <li> <a href={{plink[7]}}> {{papers[7]}} </a> </li>
+            <li> <a href={{plink[8]}}> {{papers[8]}} </a> </li>
+            <li> <a href={{plink[9]}}> {{papers[9]}} </a> </li>
+            <li> <a href={{plink[10]}}> {{papers[10]}} </a> </li>
+        </ul>
+    </div>
+    <div class='container'> 
+        <h2>Latest News</h2>
+        <ul>
+            <li> <a href='#'> {{news[0]}} </a> </li>
+            <li> <a href='#'> {{news[1]}} </a> </li>
+            <li> <a href='#'> {{news[2]}} </a> </li>
+            <li> <a href='#'> {{news[3]}} </a> </li>
+            <li> <a href='#'> {{news[4]}} </a> </li>
+            <li> <a href='#'> {{news[5]}} </a> </li>
+            <li> <a href='#'> {{news[6]}} </a> </li>
+            <li> <a href='#'> {{news[7]}} </a> </li>
+            <li> <a href='#'> {{news[8]}} </a> </li>
+            <li> <a href='#'> {{news[9]}} </a> </li>
+        </ul>
+    </div>
+
+</body>
+</html>

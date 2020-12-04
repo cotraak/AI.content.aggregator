@@ -1,0 +1,74 @@
+body{        
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-family: Helvetica, sans-serif;
+}
+.container{
+    width: 95%;
+    margin: 0 auto; /* Center the DIV horizontally */
+}
+.fixed-header{
+    width: 100%;
+    position: fixed;        
+    background: #333;
+    padding: 10px 0;
+    color: #fff;
+}
+.fixed-header{
+    top: 0;
+    left: 0;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+}
+.container p{
+    line-height: 200px; /* Create scrollbar to test positioning */
+}
+
+div.card{
+    width: 30%;
+    float: left;
+    margin: 20px;
+    height: 350px;
+    border-color: black;
+    border-width: 5px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+div.card h2, a{
+    margin-left: 30px;
+}
+
+div.container li{
+    margin-bottom: 10px;
+}
+
+.cardtop{
+    top:0;
+    bottom:0;
+    width:100%;
+    background-color: red;
+    height: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -ms-zoom-animation: default;
+    transition: 1s;
+}
+
+.cardbottom{
+    top:0;
+    bottom:0;
+    width:100%;
+    background-color: white;
+    color:white;
+    height: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -ms-zoom-animation: default;
+    transition: 1s;
+    
+}
