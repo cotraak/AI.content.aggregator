@@ -4,13 +4,12 @@ from rss import news, arxiv
 
 app=Flask(__name__)
 
-papers=arxiv().get_recent('cs.AI')
-print(papers[0][1].replace('<p>',''))
-news=news().get_recent('CAAqIAgKIhpDQkFTRFFvSEwyMHZNRzFyZWhJQ1pXNG9BQVAB')
+papers=arxiv().get_recent()
+latest_news, news=news().get_recent()
 
 @app.route('/')
 def homepage():
-    return render_template('index.html', papers=papers[:20], news=news[:20])
+    return render_template('index.html', papers=papers[:20], temp_res=latest_news)
 
 @app.route('/papers')
 def paperspage():

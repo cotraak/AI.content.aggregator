@@ -4,35 +4,37 @@
 <meta charset="utf-8">
 <link rel='stylesheet' href="{{url_for('static',filename='styles/home.css')}}">
 <title>AI aggregator</title>
-<script>
-    var x ="", i;
-    for (i=0; i<40; i++) {
-      x = x + "<li><a href="+ "{{nlink[i]}}"+ "> {{news[i]}} </a></li>";
-    }
-    document.getElementById("newslist").innerHTML = x;
-</script>
 </head>
 <body>
     <div class="fixed-header">
         <div class="container">
             <nav>
                 <a href="{{url_for('homepage')}}" style='font-size: 25px;'> AAAI </a>
-                <a href="{{url_for('paperspage')}}">Papers</a>
                 <a href="{{url_for('newspage')}}">News</a>
+                <a href="{{url_for('paperspage')}}">Papers</a>
                 <a href="{{url_for('aboutpage')}}">About</a>
-                <!-- <a href="#">Services</a>
-                <a href="#">Contact us</a> -->
             </nav>
         </div>
     </div>
     
     <div class='container'> 
         <h2>Latest News</h2>
-        <ul id='newslist'>
-            {% for title, link in news %}
-            <li><a href={{link}}>{{title}}</a></li>
+        {% for source in news: %}
+        <div class='card'> 
+            <h2>{{source}}</h2>
+            <ul style="list-style: none; padding-left: 2px;">
+            {% for d in news[source][:10]: %}
+            <li style="padding: 0px 20px 0px 0; border-bottom: 0.5px solid #eeeded">
+                <a href='{{d.link}}' title='{{d.title}}' style='color: black;overflow:hidden; max-width:90%;padding-left:0px;' title>
+                    <span class='line'>
+                        {{d.title}}
+                    </span>
+                </a>
+            </li>
             {% endfor %}
-        </ul>
+            </ul>
+        </div>
+        {% endfor %}
     </div>
 </body>
 </html>

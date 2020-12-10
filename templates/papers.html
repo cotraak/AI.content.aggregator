@@ -10,11 +10,9 @@
         <div class="container">
             <nav>
                 <a href="{{url_for('homepage')}}" style='font-size: 25px;'> AAAI </a>
-                <a href="{{url_for('paperspage')}}">Papers</a>
                 <a href="{{url_for('newspage')}}">News</a>
-                <a href="#">About</a>
-                <!-- <a href="#">Services</a>
-                <a href="#">Contact us</a> -->
+                <a href="{{url_for('paperspage')}}">Papers</a>
+                <a href="{{url_for('aboutpage')}}">About</a>
             </nav>
         </div>
     </div>
@@ -23,7 +21,7 @@
         <h2>Recent Papers</h2>
         <ul>
             {% for title, abstract, link in papers %}
-                <li><a href='{{link}}' title='{{abstract}}'>{{title}}</a></li>
+                <li><a href='{{link}}' title='{{abstract}}'  style="color: black; text-decoration:none; border-bottom: 1px solid rgb(187, 183, 183)">{{title}}</a></li>
             {% endfor %}
         </ul>
     </div>
