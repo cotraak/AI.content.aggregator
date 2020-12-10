@@ -25,6 +25,7 @@ nav a{
     padding: 7px 25px;
     display: inline-block;
 }
+
 .container p{
     line-height: 200px; /* Create scrollbar to test positioning */
 }

@@ -29,45 +29,9 @@
     <div class='container'> 
         <h2>Latest News</h2>
         <ul id='newslist'>
-            <li> <a href='{{nlink[0]}}'> {{news[0]}} </a> </li>
-            <li> <a href='{{nlink[1]}}'> {{news[1]}} </a> </li>
-            <li> <a href='{{nlink[2]}}'> {{news[2]}} </a> </li>
-            <li> <a href='{{nlink[3]}}'> {{news[3]}} </a> </li>
-            <li> <a href='{{nlink[4]}}'> {{news[4]}} </a> </li>
-            <li> <a href='{{nlink[5]}}'> {{news[5]}} </a> </li>
-            <li> <a href='{{nlink[6]}}'> {{news[6]}} </a> </li>
-            <li> <a href='{{nlink[7]}}'> {{news[7]}} </a> </li>
-            <li> <a href='{{nlink[8]}}'> {{news[8]}} </a> </li>
-            <li> <a href='{{nlink[9]}}'> {{news[9]}} </a> </li>
-            <li> <a href='{{nlink[10]}}'> {{news[10]}} </a> </li>
-            <li> <a href='{{nlink[11]}}'> {{news[11]}} </a> </li>
-            <li> <a href='{{nlink[12]}}'> {{news[12]}} </a> </li>
-            <li> <a href='{{nlink[13]}}'> {{news[13]}} </a> </li>
-            <li> <a href='{{nlink[14]}}'> {{news[14]}} </a> </li>
-            <li> <a href='{{nlink[15]}}'> {{news[15]}} </a> </li>
-            <li> <a href='{{nlink[16]}}'> {{news[16]}} </a> </li>
-            <li> <a href='{{nlink[17]}}'> {{news[17]}} </a> </li>
-            <li> <a href='{{nlink[18]}}'> {{news[18]}} </a> </li>
-            <li> <a href='{{nlink[19]}}'> {{news[19]}} </a> </li>
-            <li> <a href='{{nlink[20]}}'> {{news[20]}} </a> </li>
-            <li> <a href='{{nlink[21]}}'> {{news[21]}} </a> </li>
-            <li> <a href='{{nlink[22]}}'> {{news[22]}} </a> </li>
-            <li> <a href='{{nlink[23]}}'> {{news[23]}} </a> </li>
-            <li> <a href='{{nlink[24]}}'> {{news[24]}} </a> </li>
-            <li> <a href='{{nlink[25]}}'> {{news[25]}} </a> </li>
-            <li> <a href='{{nlink[26]}}'> {{news[26]}} </a> </li>
-            <li> <a href='{{nlink[27]}}'> {{news[27]}} </a> </li>
-            <li> <a href='{{nlink[28]}}'> {{news[28]}} </a> </li>
-            <li> <a href='{{nlink[29]}}'> {{news[29]}} </a> </li>
-            <li> <a href='{{nlink[30]}}'> {{news[30]}} </a> </li>
-            <li> <a href='{{nlink[31]}}'> {{news[31]}} </a> </li>
-            <li> <a href='{{nlink[32]}}'> {{news[32]}} </a> </li>
-            <li> <a href='{{nlink[33]}}'> {{news[33]}} </a> </li>
-            <li> <a href='{{nlink[34]}}'> {{news[34]}} </a> </li>
-            <li> <a href='{{nlink[35]}}'> {{news[35]}} </a> </li>
-            <li> <a href='{{nlink[36]}}'> {{news[36]}} </a> </li>
-            <li> <a href='{{nlink[37]}}'> {{news[37]}} </a> </li>
-            <li> <a href='{{nlink[38]}}'> {{news[38]}} </a> </li>
+            {% for title, link in news %}
+            <li><a href={{link}}>{{title}}</a></li>
+            {% endfor %}
         </ul>
     </div>
 </body>

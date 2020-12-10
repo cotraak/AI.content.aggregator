@@ -22,44 +22,18 @@
     <div class='container'> 
         <h2>Latest News</h2>
         <ul>
-            <li> <a href='{{nlink[0]}}'> {{news[0]}} </a> </li>
-            <li> <a href='{{nlink[1]}}'> {{news[1]}} </a> </li>
-            <li> <a href='{{nlink[2]}}'> {{news[2]}} </a> </li>
-            <li> <a href='{{nlink[3]}}'> {{news[3]}} </a> </li>
-            <li> <a href='{{nlink[4]}}'> {{news[4]}} </a> </li>
-            <li> <a href='{{nlink[5]}}'> {{news[5]}} </a> </li>
-            <li> <a href='{{nlink[6]}}'> {{news[6]}} </a> </li>
-            <li> <a href='{{nlink[7]}}'> {{news[7]}} </a> </li>
-            <li> <a href='{{nlink[8]}}'> {{news[8]}} </a> </li>
-            <li> <a href='{{nlink[9]}}'> {{news[9]}} </a> </li>
-            <li> <a href='{{nlink[10]}}'> {{news[10]}} </a> </li>
-            <li> <a href='{{nlink[11]}}'> {{news[11]}} </a> </li>
-            <li> <a href='{{nlink[12]}}'> {{news[12]}} </a> </li>
-            <li> <a href='{{nlink[13]}}'> {{news[13]}} </a> </li>
-            <li> <a href='{{nlink[14]}}'> {{news[14]}} </a> </li>
-            <li> <a href='{{nlink[15]}}'> {{news[15]}} </a> </li>
+            {% for title, link in news %}
+            <li><a href={{link}} title='{{title}}'>{{title}}</a></li>
+            {% endfor %}
         </ul>
     </div>
     
     <div class='container'> 
         <h2>Recent Papers</h2>
         <ul>
-            <li> <a href={{plink[0]}}> {{papers[0]}} </a> </li>
-            <li> <a href={{plink[1]}}> {{papers[1]}} </a> </li>
-            <li> <a href={{plink[2]}}> {{papers[2]}} </a> </li>
-            <li> <a href={{plink[3]}}> {{papers[3]}} </a> </li>
-            <li> <a href={{plink[4]}}> {{papers[4]}} </a> </li>
-            <li> <a href={{plink[5]}}> {{papers[5]}} </a> </li>
-            <li> <a href={{plink[6]}}> {{papers[6]}} </a> </li>
-            <li> <a href={{plink[7]}}> {{papers[7]}} </a> </li>
-            <li> <a href={{plink[8]}}> {{papers[8]}} </a> </li>
-            <li> <a href={{plink[9]}}> {{papers[9]}} </a> </li>
-            <li> <a href={{plink[10]}}> {{papers[10]}} </a> </li>
-            <li> <a href={{plink[11]}}> {{papers[11]}} </a> </li>
-            <li> <a href={{plink[12]}}> {{papers[12]}} </a> </li>
-            <li> <a href={{plink[13]}}> {{papers[13]}} </a> </li>
-            <li> <a href={{plink[14]}}> {{papers[14]}} </a> </li>
-            <li> <a href={{plink[15]}}> {{papers[15]}} </a> </li>
+            {% for title, abstract, link in papers %}
+            <li><a href='{{link}}' title='{{abstract}}'>{{title}}</a></li>
+            {% endfor %}
         </ul>
     </div>
 

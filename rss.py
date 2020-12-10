@@ -16,8 +16,10 @@ class arxiv:
         titles=[item['title'] for item in items]
         abstracts=[item['summary'] for item in items]
         links=[item['link'] for item in items]
+        titles=[re.sub(r'\. \(.*?\)', '', title) for title in titles]
         
-        return titles, abstracts, links
+
+        return list(zip(titles, [x.replace('<p>','').replace('</p>','') for x in abstracts], links))
 
 class news:
     def __init__(self):
@@ -30,4 +32,4 @@ class news:
         titles=[item['title'] for item in items]
         links=[item['link'] for item in items]
 
-        return titles, links
+        return list(zip(titles, links))
