@@ -24,4 +24,4 @@ class news:
         soup=BeautifulSoup(data.content, 'lxml-xml')
         titles=soup.find_all('title')[1:]
         links=soup.find_all('link')[1:]
-        return [title.text for title in titles], [link.text for link in links]      
+        return [title.text for title in titles], [link.text for link in links]
