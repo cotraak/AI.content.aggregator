@@ -28,9 +28,10 @@ class news:
         'DeepMind':'https://deepmind.com/blog/feed/basic/',
         'Wired':'https://www.wired.com/feed/category/science/latest/rss',
         'MachineLearningMastery':'http://machinelearningmastery.com/blog/feed',
-        'OpenAI': 'https://openai.com/feed.xml?format=xml',
+        'OpenAI': 'https://openai.com/blog/rss/',
         'AWS':'https://aws.amazon.com/blogs/ai/feed',
-        'Ibenta Blog':'https://www.inbenta.com/en/blog/feed'}
+        'Ibenta Blog':'https://www.inbenta.com/en/blog/feed',
+        'TDS': 'https://towardsdatascience.com/feed'}
     
     def get_recent(self):
         feed={}

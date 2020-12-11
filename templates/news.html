@@ -22,9 +22,9 @@
         {% for source in news: %}
         <div class='card'> 
             <h2>{{source}}</h2>
-            <ul style="list-style: none; padding-left: 2px;">
+            <ul style="list-style: none; padding-left: 2px; padding-right:20px;">
             {% for d in news[source][:10]: %}
-            <li style="padding: 0px 20px 0px 0; border-bottom: 0.5px solid #eeeded">
+            <li style="border-bottom: 0.5px solid #333">
                 <a href='{{d.link}}' title='{{d.title}}' style='color: black;overflow:hidden; max-width:90%;padding-left:0px;' title>
                     <span class='line'>
                         {{d.title}}
